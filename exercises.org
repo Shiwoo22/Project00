@@ -5,7 +5,11 @@
 #+STARTUP: showeverything entitiespretty
 #+SETUPFILE: ../theme-bigblow.setup
 
-** TODO WDT
+** DONE WDT
+   CLOSED: [2018-05-14 월 08:22]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 월 08:19]--[2018-05-14 월 08:22] =>  0:03
+   :END:
   PVP the result of evaluating the following (paying special attention to the
   more-than-syntactic difference between the \lsquo{}starless\rsquo{} form of =let= and the
   \lsquo{}star-suffixed\rsquo{} form):
@@ -36,7 +40,13 @@
 #+END_SRC
 
 ***  Your answer goes here.
-** TODO TEJ
+       (1.) 6 (2.) Void since d is unbound (3.) [+ a b c d] (4.) 10 (5.) void
+       (6.) 11 
+** DONE TEJ
+   CLOSED: [2018-05-14 월 09:07]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 월 09:00]--[2018-05-14 월 09:07] =>  0:07
+   :END:
   A function-as-association between elements of a domain and elements of a
   codomain, for \ldquo{}small\rdquo domains and codomains, inspired so-called \ldquo{}association
   lists\rdquo (or alists) and the =assoc= (and associated) functions.
@@ -71,7 +81,19 @@
   There are several variations of =assoc=. Find and give examples of using them.
 
 *** Your answer goes here.
-** TODO WFK
+     (1.) assq
+      (setq trees '((pine . cones) (oak . acorns) (maple . seeds)))
+      (assq 'pine trees)
+
+     (2.) alist-get, works like assq, but instead of returning the entire association
+          returns only the value.
+ 
+     (3.) assoc-default searches alist for a match for key.    
+** DONE WFK
+   CLOSED: [2018-05-14 월 09:12]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 월 09:10]--[2018-05-14 월 09:12] =>  0:02
+   :END:
   In the function-as-map context, here is another interpretation:
 
   A \ldquo{}map\rdquo type (AKA associative array, AKA hashtable) is found in many
@@ -117,7 +139,7 @@
 
   And of course elisp:
 #+BEGIN_SRC emacs-lisp :results output
-  (let* ((mymap (make-hash-table :test 'equal)))
+  (let* ((mymap (make-hash-table)))
     (puthash "one" "red" mymap)
     (puthash "two" "blue" mymap)
     (puthash "three" "green" mymap)
@@ -127,7 +149,8 @@
     (maphash (lambda (key value) (princ (format "%s : %s\n" key value))) mymap))
 #+END_SRC
 
-: ("red" "blue" "green")
+#+RESULTS:
+: (nil nil nil)
 : one : red
 : two : blue
 : three : green
@@ -136,7 +159,17 @@
   =make-hash-table= call?
   
 *** Your answer goes here.
-** TODO TER
+     the results are:
+     (nil nil nil)
+      one : red
+      two : blue
+      three : green
+      so therefore the table is fine, but the colors in the alist become nil
+** DONE TER
+   CLOSED: [2018-05-14 월 09:24]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 월 09:21]--[2018-05-14 월 09:24] =>  0:03
+   :END:
   This exercise explores /looping/ versus /mapping/.
 
   What does the =morphify= function defined below do? Think about it, then PVP
@@ -172,7 +205,14 @@
   Explain how this version of =morphify= works.
   
 *** Your answer goes here.
-** TODO TGE
+     =morphifyr= function works by looping through itself. Since it is recursive
+     the function is defined within itself to give an infinite number of instances
+     but ends when the recursion is no longer called.
+** DONE TGE
+   CLOSED: [2018-05-14 월 08:42]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 월 08:42]--[2018-05-14 월 08:42] =>  0:03
+   :END:
   Note the difference if -13 is used instead of 13 below:
 #+BEGIN_SRC emacs-lisp :results silent
   (defun compute-floor-the-hard-way (dividend divisor)
@@ -191,6 +231,8 @@
   Is the hard way correct?
   
 *** Your answer goes here.
+      The hard way is correct in that it calculates the correct answer for the 
+      floor.
 ** TODO THP
   Graph the floor and ceiling functions f(x) = \lfloor{}x\rfloor and f(x) = \lceil{}x\rceil for real
   number values of x in the interval [-5.0 .. 5.0].
@@ -220,10 +262,15 @@
   fractional part is less than one-half should be rounded down, otherwise up.)
 
 ***  Your answer goes here.
-** TODO TKG
+** DONE TKG
+   CLOSED: [2018-05-14 월 08:55]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 월 08:50]--[2018-05-14 월 08:55] =>  0:05
+   :END:
   Explore the inverse of =assoc= via the functions =rassoc= and associates.
-
+  
 ***  Your answer goes here.
+       The =rassoc= function works if the key item or tests if the key item is not equal to the first item of the list. 
 ** TODO WOV
   Identify the formula or rule that generates the terms of each sequence:
   1. =[7 14 21 28 35 42 49 56 63 70 ...]=
@@ -238,7 +285,12 @@
   10. =[2 3 5 7 11 13 17 19 23 29 ...]=
 
 ***  Your answer goes here.
-** TODO WQW
+       (1.) n+7 (2.) n+4 (3.) (8.)n*2 (9.) n*3 (10.)
+** DONE WQW
+   CLOSED: [2018-05-14 월 09:35]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 월 09:29]--[2018-05-14 월 09:35] =>  0:06
+   :END:
   Classify the following lisp functions according as each is or is not a predicate:
   | Predicate? | Yes or No? |
   |------------+------------|
@@ -253,3 +305,14 @@
   | =oddp=     |            |
 
 ***  Your answer goes here. (Replicate the above table.)
+  | Predicate? | Yes or No? |
+  |------------+------------|
+  | =list=     |     no     |
+  | =listp=    |     yes    |
+  | =integerp= |     yes    |
+  | =vector=   |     no     |
+  | =vectotp=  |     yes    |
+  | =symbolp=  |     yes    |
+  | =zerop=    |     yes    |
+  | =evenp=    |     no     |
+  | =oddp=     |     no     |
