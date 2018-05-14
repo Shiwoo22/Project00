@@ -7,3 +7,45 @@
 NOTE: You must get this approved by Brother Benning.
 
 * Special Project
+#+begin_note
+N gval frn jvgu jnirf fb uvtu
+Fcynfuvat pbybef va gur fxl.
+Ohg uryq nobir gur ynaq orybj,
+Ar're njnl zl jngref oybj.
+
+21
+Flower "____"
+
+Once the above encoded message has been decoded, using the clues below figure out the 
+answer to the message and then state what they all have to do with one another.
+
+Then compare 
+your answer: 
+
+with:
+(0110 0001)(0110 1101)(0110 0101)(0111 0010)(0110 1001)(0110 0011)(0110 0001)
+
+Explain your process on how you solved the puzzle. 
+#+end_note
+
+#+begin_note
+Steps to solving the puzzle:
+
+Step 1.) Unscramble the message by using the rot13 function found in elisp.
+         To help with solving the riddle think of another meaning of colors.
+Step 2.) Look at the number as the sum of four numbers. Therefore
+         21 -->1776
+step 3.) Fill in the answer to the riddle, which is flag and then use the clue 
+         of "Flower Flag" to come to the conclusion of America.
+step 4.) Convert binary to decimal and then from ascii to english to verify. 
+
+#+end_note
+
+#+begin_note
+The reason I created this puzzle was not only test basic understanding of elisp
+but to cause the problem solver to think on multiple planes of ideas, such as history
+binary and english. It is meant to help the solver to think more abstractly to come
+up with concrete answers. Thinking only on a single plane of thought can limit your
+veiw but when adding multiple layers of seemingly unrelated topics or ideas it helps
+with seeing the hidden meaning. 
+#+end_note
