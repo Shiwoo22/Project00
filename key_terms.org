@@ -71,26 +71,86 @@ sufficient condition
 
 necessary condition
 
-~p
+~p: Defined as not-p or the inverse of p. Example: p = "I will go to school."
+~p would then equal "I will not go to school."
+question: How would you write the negation of p?
+a.) not-p
+b.) Xp
+c.) *p
+d.) --p
+e.) ~p
 
-p ^ q
+p ^ q: Defined as p and q meaning that both must be true for the statement to be true.
+Example: There are clouds in the sky and it is snowing.
+Question: True or False this T.T is the inverse of p ^ q.
+00 | 1
+01 | 1
+10 | 1
+11 | 0
 
-p V q
+p V q: Defined as p or q, which means one or the other can be true for the statment
+to be true, and is still true when both are true. 
+Example: Do you want the chocolate or the vanilla?
+Question: True or False, this is the Truth table for the or function.
+pq | p V q
+00 | 0
+01 | 0  
+10 | 0
+11 | 1
 
-p XOR q
+Explain why (True/False): False because the truth table shows the attributes of 
+and, since or requires on of the statments to be true in order for it to be true.
 
-p == q
+p XOR q: Defined as the exclusive or, where one or the other can be true for the statement to be true,
+but not both. Example: One must graduate high school or receive a G.E.D to attend
+college.
 
-p -> q
 
-p <--> q
+p == q: Defined as p is equivalent to q which means that if q is true p must be and visa-versa.
+Example: 
+Question which statement is equivalent?
+a.)~p V q == p ^ ~q
+b.) ~(p->q) == ~(~p V q)
 
-Three dots in a triangle
+p -> q: P is true if q is true, or it is also means p is a sufficient condition for q, which means if q then p
+Example: 
+Question: fill out a T.T for p->q
+pq | p->q
+11 | 1
+10 | 0
+01 | 1
+00 | 1
+p <--> q: This is a biconditional statement that means p if and only if q.
+Example: You will pass the test if and only if you study.
+Question: fill out a T.T for the biconditonal statement.
+pq | p<->q
+11 | 1
+10 | 0
+01 | 0
+00 | 1 
 
-upside down A
+Three dots in a triangle: Defined as therefore. Used in math to show that an answer
+to a equation is that. Such as therefore x = 2, if the equation was 4+2x=0.
+Question: What does the triangle made of three dots represent?
+a.) because
+b.) Only if
+c.) therefore
+d.) if x then y
 
-Backwards E
+upside down A: Means the universal modifier, which means for all: 
+Example: "All for one and one for all!" (Three Musketeers) <-- only thing I could think of. 
+question: What is equvalinet to the inverse of the universal modifier?
+a.) If and only if
+b.) all but one/ Exetensional modifier
+c.) Only if
+d.) xor
 
+Backwards E: Exetensional modifier which means anything but one.
+Example:
+Question: If it means all but one, what is the inverse of the Exetensional modifier?
+a.) Everything
+b.) universal modifier
+c.) nothing but one
 union
 
 intersection
