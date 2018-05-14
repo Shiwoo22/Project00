@@ -6,21 +6,48 @@
 
 NOTE: Comment your code, and verify it works for "breaking cases" i.e. 0! = 1.
 
-* Factorial Code
+ Code
 ** Code
+c++ code;
+   int n;
+   long factorial = 1;
+
+   cout << "Enter a positive integer";
+   cin >> n;
+
+   for(int i = 1; i <= n; i++)
+  {
+     factorial *= i; 
+  }
+
+  cout << "The factorial for " << n << " = " << factorial << endl;
 #+BEGIN_SRC emacs-lisp
-(+ 2 3 4)
+
 #+END_SRC
+
 ** Test cases
 ** How big a number will make your computer freeze?
 * "Real-World" function with mapcar
 ** What is mapcar
+    mapcar is a function that calls its first argument with each element of
+    its second element in turn.
 ** Code
 #+BEGIN_SRC emacs-lisp
-
+(mapcar '1+ '(2 4 6))
 #+END_SRC
+
+#+RESULTS:
+| 3 | 5 | 7 |
+
 * Loop function
 ** Code
 #+BEGIN_SRC emacs-lisp
-
+(mapcar (lambda (element)
+      (let ((key (car element))
+            (value (cdr element)))
+       (cons value key)))
+       '((1 . a) (2 . b) (3 . c) ( 4 . d)))
 #+END_SRC
+
+#+RESULTS:
+: ((a . 1) (b . 2) (c . 3) (d . 4))
