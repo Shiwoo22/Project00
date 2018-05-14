@@ -84,3 +84,19 @@
 
    A problem is a problem because we needed more information. When you
    balance your problem, you get more information.
+#+begin_note
+Exercises Vs. Problems
+
+From what I have learned so far in discrete math exercises are meant to be quick 
+almost spontaneous sets of real-world applicable exercises. While they force us to think
+they don't require more then what is given. An exercise could be as simple as equating a
+postfix equation, or thinking logically about what ~p ^ q means using english.
+A problem on the other hand requires time patience and the problem solver to spend more time thinking
+as opposed to just sitting on their hands hoping it will come easy. A problem is given
+to help increase our stategic minds, help us think tactically. As the above paragraph said
+"...problem solvers are mountain climbers...," which I agree. Problems are not
+insourmountable, but they are truly something one can over come if he/she is willing
+to put more then just common knowledge, but willing to strecth their intelligence, by pushing
+their logic to the breaking point.
+
+#+end_note 
